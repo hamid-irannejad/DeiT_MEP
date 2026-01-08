@@ -1,0 +1,32 @@
+read
+  mol pqr tdo_ph7_amber.pqr
+end
+
+elec
+  mg-manual
+  mol 1
+  dime 161 161 161
+  grid 0.25 0.25 0.25
+  gcent 37.631 -61.835 -32.297
+
+  lpbe
+  bcfl sdh
+  pdie 4.0
+  sdie 78.5
+  srfm smol
+  srad 1.4
+  chgm spl4
+  sdens 20.0
+
+  ion charge 1 conc 0.15 radius 2.0
+  ion charge -1 conc 0.15 radius 2.0
+
+  temp 298.15
+  calcenergy total
+  calcforce no
+
+  write pot dx tdo_active_single
+end
+
+quit
+
