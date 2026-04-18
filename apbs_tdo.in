@@ -1,3 +1,4 @@
+
 read
   mol pqr tdo_ph7_amber.pqr
 end
